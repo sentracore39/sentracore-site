@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SentraCore | AI-Powered Security Operations Platform</title>
+    <meta
+      name="description"
+      content="SentraCore is an AI-powered security operations platform that unifies security signals, prioritizes threats, guides response, and continuously tracks compliance."
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      html {
+        scroll-behavior: smooth;
+      }
+
+      body {
+        background: #020617;
+      }
+
+      .hero-grid {
+        background-image:
+          linear-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 1px),
+          linear-gradient(90deg, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+        background-size: 38px 38px;
+        mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.95), rgba(0, 0, 0, 0.2));
+      }
+
+      .glow-orb {
+        filter: blur(50px);
+      }
+
+      .feature-card:hover {
+        transform: translateY(-6px);
+        border-color: rgba(96, 165, 250, 0.35);
+      }
+
+      .pricing-card:hover {
+        transform: translateY(-6px);
+        box-shadow: 0 0 40px rgba(59, 130, 246, 0.12);
+      }
+
+      .pulse-slow {
+        animation: pulseSlow 2.3s infinite;
+      }
+
+      .ping-soft {
+        animation: pingSoft 2s infinite;
+      }
+
+      .float-y {
+        animation: floatY 4s ease-in-out infinite;
+      }
+
+      .bars span {
+        animation: growBar 1.7s ease-in-out infinite;
+        transform-origin: bottom;
+      }
+
+      .bars span:nth-child(2) {
+        animation-delay: 0.18s;
+      }
+
+      .bars span:nth-child(3) {
+        animation-delay: 0.32s;
+      }
+
+      .bars span:nth-child(4) {
+        animation-delay: 0.46s;
+      }
+
+      @keyframes pulseSlow {
+        0%, 100% { opacity: 0.55; transform: scale(1); }
+        50% { opacity: 1; transform: scale(1.08); }
+      }
+
+      @keyframes pingSoft {
+        0% { transform: scale(0.9); opacity: 0.7; }
+        80%, 100% { transform: scale(1.35); opacity: 0; }
+      }
+
+      @keyframes floatY {
+        0%, 100% { transform: translateY(0px); }
+        50% { transform: translateY(-8px); }
+      }
+
+      @keyframes growBar {
+        0%, 100% { transform: scaleY(0.7); opacity: 0.7; }
+        50% { transform: scaleY(1.08); opacity: 1; }
+      }
+    </style>
+  </head>
+  <body class="min-h-screen bg-slate-950 text-white selection:bg-cyan-400/20">
+    <div class="relative overflow-hidden border-b border-white/10">
+      <div class="absolute inset-0 hero-grid"></div>
+      <div class="glow-orb absolute -left-16 top-10 h-64 w-64 rounded-full bg-blue-500/20"></div>
+      <div class="glow-orb absolute right-0 top-24 h-72 w-72 rounded-full bg-emerald-500/15"></div>
+
+      <div class="relative mx-auto max-w-7xl px-6 py-20 lg:px-10 lg:py-28">
+        <nav class="mb-16 flex items-center justify-between gap-6">
+          <div class="flex items-center gap-3">
+            <div class="relative flex h-12 w-12 items-center justify-center overflow-hidden rounded-2xl border border-cyan-300/20 bg-[linear-gradient(135deg,rgba(59,130,246,0.22),rgba(16,185,129,0.18))] shadow-[0_0_30px_rgba(59,130,246,0.15)]">
+              <div class="absolute inset-1 rounded-[18px] border border-white/10"></div>
+              <div class="absolute h-8 w-8 rounded-full border border-cyan-300/35"></div>
+              <div class="absolute h-5 w-5 rounded-full border border-emerald-300/45"></div>
+              <div class="pulse-slow absolute left-[10px] top-[10px] h-2 w-2 rounded-full bg-cyan-300"></div>
+              <div class="pulse-slow absolute bottom-[10px] right-[10px] h-2 w-2 rounded-full bg-emerald-300"></div>
+              <div class="relative text-sm font-black tracking-[0.2em] text-white">SC</div>
+            </div>
+            <div>
+              <p class="text-sm font-semibold uppercase tracking-[0.25em] text-slate-300">SentraCore</p>
+              <p class="text-xs text-slate-400">AI-powered security operations platform</p>
+            </div>
+          </div>
+          <div class="hidden gap-8 text-sm text-slate-300 md:flex">
+            <a href="#features" class="transition hover:text-white">Features</a>
+            <a href="#use-cases" class="transition hover:text-white">Use Cases</a>
+            <a href="#pricing" class="transition hover:text-white">Pricing</a>
+            <a href="#contact" class="transition hover:text-white">Contact</a>
+          </div>
+        </nav>
+
+        <div class="grid items-center gap-12 lg:grid-cols-2">
+          <div>
+            <div class="mb-5 inline-flex items-center rounded-full border border-emerald-400/20 bg-emerald-400/10 px-4 py-2 text-sm text-emerald-300">
+              Vendor-hosted, AI-native, HIPAA-focused
+            </div>
+            <h1 class="max-w-3xl text-4xl font-semibold leading-tight tracking-tight text-white sm:text-5xl lg:text-6xl">
+              Security operations and compliance, with less manual work and better decisions.
+            </h1>
+            <p class="mt-6 max-w-2xl text-lg leading-8 text-slate-300">
+              SentraCore unifies security signals, prioritizes threats, guides response, and continuously tracks compliance from one dashboard.
+            </p>
+            <div class="mt-8 flex flex-wrap gap-4">
+              <a href="#pricing" class="rounded-2xl bg-blue-500 px-6 py-3 text-sm font-semibold text-white shadow-xl transition hover:-translate-y-0.5">View Plans</a>
+              <a href="#features" class="rounded-2xl border border-white/15 bg-white/5 px-6 py-3 text-sm font-semibold text-slate-200 transition hover:bg-white/10">Explore Platform</a>
+            </div>
+
+            <div class="mt-10 grid gap-4 sm:grid-cols-3">
+              <div class="rounded-2xl border border-white/10 bg-white/5 p-4 backdrop-blur">
+                <div class="text-2xl font-semibold text-white">AI-native</div>
+                <div class="mt-1 text-sm text-slate-400">from day one</div>
+              </div>
+              <div class="rounded-2xl border border-white/10 bg-white/5 p-4 backdrop-blur">
+                <div class="text-2xl font-semibold text-white">HIPAA-focused</div>
+                <div class="mt-1 text-sm text-slate-400">reporting by default</div>
+              </div>
+              <div class="rounded-2xl border border-white/10 bg-white/5 p-4 backdrop-blur">
+                <div class="text-2xl font-semibold text-white">1 dashboard</div>
+                <div class="mt-1 text-sm text-slate-400">for unified visibility</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="float-y relative">
+            <div class="rounded-[28px] border border-white/10 bg-slate-900/80 p-5 shadow-2xl backdrop-blur-xl">
+              <div class="rounded-2xl border border-white/10 bg-slate-950 p-4">
+                <div class="mb-4 flex items-center justify-between border-b border-white/10 pb-4">
+                  <div>
+                    <p class="text-sm font-medium text-slate-300">SentraCore Dashboard</p>
+                    <p class="text-xs text-slate-500">Unified detections and compliance posture</p>
+                  </div>
+                  <span class="rounded-full bg-emerald-400/10 px-3 py-1 text-xs font-medium text-emerald-300">Live monitoring</span>
+                </div>
+
+                <div class="space-y-3">
+                  <div class="rounded-2xl border border-white/10 bg-white/[0.03] p-4">
+                    <div class="flex flex-wrap items-center justify-between gap-3">
+                      <div>
+                        <p class="text-sm font-semibold text-white">Authentication anomaly detected</p>
+                        <p class="mt-1 text-xs text-slate-400">identity-01</p>
+                      </div>
+                      <div class="text-right">
+                        <p class="text-xs font-medium text-blue-300">High</p>
+                        <p class="mt-1 text-xs text-slate-500">3 min ago</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="rounded-2xl border border-white/10 bg-white/[0.03] p-4">
+                    <div class="flex flex-wrap items-center justify-between gap-3">
+                      <div>
+                        <p class="text-sm font-semibold text-white">Suspicious access pattern flagged</p>
+                        <p class="mt-1 text-xs text-slate-400">vpn-gateway</p>
+                      </div>
+                      <div class="text-right">
+                        <p class="text-xs font-medium text-red-300">Critical</p>
+                        <p class="mt-1 text-xs text-slate-500">11 min ago</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="rounded-2xl border border-white/10 bg-white/[0.03] p-4">
+                    <div class="flex flex-wrap items-center justify-between gap-3">
+                      <div>
+                        <p class="text-sm font-semibold text-white">Transmission security review required</p>
+                        <p class="mt-1 text-xs text-slate-400">ehr-sync</p>
+                      </div>
+                      <div class="text-right">
+                        <p class="text-xs font-medium text-amber-300">Medium</p>
+                        <p class="mt-1 text-xs text-slate-500">16 min ago</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="rounded-2xl border border-white/10 bg-white/[0.03] p-4">
+                    <div class="flex flex-wrap items-center justify-between gap-3">
+                      <div>
+                        <p class="text-sm font-semibold text-white">Configuration risk surfaced</p>
+                        <p class="mt-1 text-xs text-slate-400">cloud-admin</p>
+                      </div>
+                      <div class="text-right">
+                        <p class="text-xs font-medium text-blue-300">High</p>
+                        <p class="mt-1 text-xs text-slate-500">24 min ago</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <section id="features" class="mx-auto max-w-7xl px-6 py-20 lg:px-10">
+      <div class="max-w-2xl">
+        <p class="text-sm font-semibold uppercase tracking-[0.25em] text-blue-300">What you get</p>
+        <h2 class="mt-3 text-3xl font-semibold tracking-tight text-white sm:text-4xl">A force multiplier for SOC and compliance teams.</h2>
+        <p class="mt-4 text-lg text-slate-400">SentraCore is designed to reduce busywork, accelerate investigations, and improve security outcomes through automation and intelligence.</p>
+      </div>
+
+      <div class="mt-12 grid gap-6 md:grid-cols-2 xl:grid-cols-3">
+        <article class="feature-card rounded-[28px] border border-white/10 bg-white/[0.04] p-6 shadow-lg transition duration-300">
+          <div class="mb-5 flex h-16 w-16 items-center justify-center rounded-2xl border border-white/10 bg-slate-900/80 ring-1 ring-blue-400/20">
+            <div class="relative h-14 w-14">
+              <div class="absolute inset-0 rounded-2xl bg-blue-500/15 blur-sm"></div>
+              <div class="pulse-slow absolute left-1 top-1 h-4 w-4 rounded-full bg-blue-300"></div>
+              <div class="absolute right-1 top-3 h-2.5 w-6 rounded-full bg-emerald-300/80"></div>
+              <div class="absolute bottom-2 left-2 right-2 h-2 rounded-full bg-slate-700"></div>
+              <div class="pulse-slow absolute bottom-2 left-2 h-2 w-8 rounded-full bg-blue-400"></div>
+            </div>
+          </div>
+          <h3 class="text-xl font-semibold text-white">AI-Powered Threat Prioritization</h3>
+          <p class="mt-3 leading-7 text-slate-400">SentraCore unifies signals from cloud, endpoint, and on-prem systems, then uses AI to prioritize threats so teams focus on what matters most.</p>
+        </article>
+
+        <article class="feature-card rounded-[28px] border border-white/10 bg-white/[0.04] p-6 shadow-lg transition duration-300">
+          <div class="mb-5 flex h-16 w-16 items-center justify-center rounded-2xl border border-white/10 bg-slate-900/80 ring-1 ring-blue-400/20">
+            <div class="bars flex h-14 w-14 items-end justify-center gap-1">
+              <span class="h-[18px] w-2 rounded-t-full bg-gradient-to-t from-blue-500 to-cyan-300"></span>
+              <span class="h-[28px] w-2 rounded-t-full bg-gradient-to-t from-blue-500 to-cyan-300"></span>
+              <span class="h-[22px] w-2 rounded-t-full bg-gradient-to-t from-blue-500 to-cyan-300"></span>
+              <span class="h-[36px] w-2 rounded-t-full bg-gradient-to-t from-blue-500 to-cyan-300"></span>
+            </div>
+          </div>
+          <h3 class="text-xl font-semibold text-white">Centralized Log Onboarding</h3>
+          <p class="mt-3 leading-7 text-slate-400">Ingest logs from agreed sources and normalize them into a standard event schema for search, dashboards, detections, and investigations.</p>
+        </article>
+
+        <article class="feature-card rounded-[28px] border border-white/10 bg-white/[0.04] p-6 shadow-lg transition duration-300">
+          <div class="mb-5 flex h-16 w-16 items-center justify-center rounded-2xl border border-white/10 bg-slate-900/80 ring-1 ring-blue-400/20">
+            <div class="relative h-14 w-14">
+              <div class="absolute inset-1 rounded-2xl border border-red-400/40"></div>
+              <div class="ping-soft absolute left-2 top-2 h-2.5 w-2.5 rounded-full bg-red-400"></div>
+              <div class="absolute right-2 top-2 h-2.5 w-5 rounded-full bg-amber-300"></div>
+              <div class="absolute bottom-3 left-2 right-2 h-2 rounded-full bg-slate-700"></div>
+              <div class="absolute bottom-3 left-2 h-2 w-10 rounded-full bg-red-400/90"></div>
+            </div>
+          </div>
+          <h3 class="text-xl font-semibold text-white">Live Alerts and Investigations</h3>
+          <p class="mt-3 leading-7 text-slate-400">Run severity-based alerting across authentication anomalies, brute force attempts, suspicious access patterns, configuration risks, and other security signals.</p>
+        </article>
+
+        <article class="feature-card rounded-[28px] border border-white/10 bg-white/[0.04] p-6 shadow-lg transition duration-300">
+          <div class="mb-5 flex h-16 w-16 items-center justify-center rounded-2xl border border-white/10 bg-slate-900/80 ring-1 ring-blue-400/20">
+            <div class="relative h-14 w-14">
+              <div class="absolute inset-0 rounded-2xl bg-emerald-500/10"></div>
+              <div class="absolute left-2 top-7 h-1 w-8 rounded-full bg-emerald-300"></div>
+              <div class="absolute left-8 top-3 h-1 w-1 rotate-45 rounded-full bg-blue-300"></div>
+              <div class="absolute left-9 top-5 h-1 w-1 rotate-45 rounded-full bg-blue-300"></div>
+              <div class="absolute left-10 top-7 h-1 w-1 rotate-45 rounded-full bg-blue-300"></div>
+              <div class="pulse-slow absolute right-2 top-2 h-10 w-10 rounded-full border border-emerald-300/40"></div>
+            </div>
+          </div>
+          <h3 class="text-xl font-semibold text-white">Playbook-Style Guidance</h3>
+          <p class="mt-3 leading-7 text-slate-400">Give analysts drill-down views into alerts, recommended remediation steps, and optional ticketing workflows such as Jira.</p>
+        </article>
+
+        <article class="feature-card rounded-[28px] border border-white/10 bg-white/[0.04] p-6 shadow-lg transition duration-300">
+          <div class="mb-5 flex h-16 w-16 items-center justify-center rounded-2xl border border-white/10 bg-slate-900/80 ring-1 ring-blue-400/20">
+            <div class="relative h-14 w-14">
+              <div class="absolute inset-2 rounded-2xl border border-cyan-300/40"></div>
+              <div class="absolute left-4 top-4 h-6 w-6 rounded-lg border border-cyan-300/80"></div>
+              <div class="pulse-slow absolute left-6 top-6 h-2 w-2 rounded-full bg-cyan-300"></div>
+              <div class="absolute right-3 top-4 h-1 w-6 rounded-full bg-slate-600"></div>
+              <div class="absolute right-3 top-8 h-1 w-5 rounded-full bg-slate-600"></div>
+            </div>
+          </div>
+          <h3 class="text-xl font-semibold text-white">HIPAA-Focused Reporting</h3>
+          <p class="mt-3 leading-7 text-slate-400">Track compliance across Access Controls, Audit Controls, Integrity, and Transmission Security with downloadable PDF reporting.</p>
+        </article>
+
+        <article class="feature-card rounded-[28px] border border-white/10 bg-white/[0.04] p-6 shadow-lg transition duration-300">
+          <div class="mb-5 flex h-16 w-16 items-center justify-center rounded-2xl border border-white/10 bg-slate-900/80 ring-1 ring-blue-400/20">
+            <div class="relative h-14 w-14">
+              <div class="absolute inset-x-2 bottom-2 h-2 rounded-full bg-slate-700"></div>
+              <div class="pulse-slow absolute bottom-2 left-2 h-2 w-7 rounded-full bg-emerald-300"></div>
+              <div class="absolute left-3 top-7 h-4 w-4 rounded-full border-2 border-emerald-300"></div>
+              <div class="absolute left-8 top-3 h-4 w-4 rounded-full border-2 border-blue-300"></div>
+              <div class="pulse-slow absolute left-[22px] top-1 h-6 w-6 rounded-full border border-white/20"></div>
+            </div>
+          </div>
+          <h3 class="text-xl font-semibold text-white">Continuous Detection Tuning</h3>
+          <p class="mt-3 leading-7 text-slate-400">Reduce false positives over time with customer-specific tuning, alert reviews, and ongoing improvements based on operational feedback.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="use-cases" class="border-y border-white/10 bg-white/[0.03]">
+      <div class="mx-auto grid max-w-7xl gap-12 px-6 py-20 lg:grid-cols-2 lg:px-10">
+        <div>
+          <p class="text-sm font-semibold uppercase tracking-[0.25em] text-emerald-300">Why SentraCore</p>
+          <h2 class="mt-3 text-3xl font-semibold tracking-tight text-white sm:text-4xl">Most platforms collect data. SentraCore helps teams make decisions.</h2>
+          <p class="mt-4 text-lg leading-8 text-slate-400">The real gap in security operations is not data volume, it is the ability to automate judgment, prioritize work, and continuously improve.</p>
+        </div>
+        <div class="space-y-4">
+          <div class="rounded-2xl border border-white/10 bg-slate-900/70 p-5"><p class="text-base text-slate-200">Prioritize threats across cloud, endpoint, and on-prem systems from one dashboard.</p></div>
+          <div class="rounded-2xl border border-white/10 bg-slate-900/70 p-5"><p class="text-base text-slate-200">Cut manual compliance work with HIPAA-focused scoring, reporting, and evidence-style review tracking.</p></div>
+          <div class="rounded-2xl border border-white/10 bg-slate-900/70 p-5"><p class="text-base text-slate-200">Support SOC teams with live alert queues, drill-down investigations, and guided remediation steps.</p></div>
+          <div class="rounded-2xl border border-white/10 bg-slate-900/70 p-5"><p class="text-base text-slate-200">Continuously tune detections to reduce noise and improve real-world security outcomes.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="pricing" class="mx-auto max-w-7xl px-6 py-20 lg:px-10">
+      <div class="max-w-2xl">
+        <p class="text-sm font-semibold uppercase tracking-[0.25em] text-blue-300">Pricing</p>
+        <h2 class="mt-3 text-3xl font-semibold tracking-tight text-white sm:text-4xl">Budget-friendly plans with predictable limits.</h2>
+        <p class="mt-4 text-lg text-slate-400">Plans are capped by integrations, retention, and average daily log volume, with a 2-week pilot and optional add-ons for expansion.</p>
+      </div>
+
+      <div class="mt-10 grid gap-6 lg:grid-cols-4">
+        <div class="pricing-card rounded-[28px] border border-white/10 bg-white/[0.04] p-6 shadow-lg transition duration-300">
+          <p class="text-sm font-semibold uppercase tracking-[0.2em] text-slate-400">Starter</p>
+          <p class="mt-3 text-3xl font-semibold text-white">$199/mo</p>
+          <p class="mt-4 leading-7 text-slate-400">Up to 1 integration, 15 days retention, 5 GB/day included</p>
+          <a href="#contact" class="mt-6 inline-flex w-full items-center justify-center rounded-2xl border border-white/10 bg-white/5 px-4 py-3 text-sm font-semibold text-white transition hover:bg-white/10">Choose Starter</a>
+        </div>
+        <div class="pricing-card rounded-[28px] border border-white/10 bg-white/[0.04] p-6 shadow-lg transition duration-300">
+          <p class="text-sm font-semibold uppercase tracking-[0.2em] text-slate-400">Standard</p>
+          <p class="mt-3 text-3xl font-semibold text-white">$399/mo</p>
+          <p class="mt-4 leading-7 text-slate-400">Up to 2 integrations, 30 days retention, 10 GB/day included</p>
+          <a href="#contact" class="mt-6 inline-flex w-full items-center justify-center rounded-2xl border border-white/10 bg-white/5 px-4 py-3 text-sm font-semibold text-white transition hover:bg-white/10">Choose Standard</a>
+        </div>
+        <div class="pricing-card rounded-[28px] border border-white/10 bg-white/[0.04] p-6 shadow-lg transition duration-300">
+          <p class="text-sm font-semibold uppercase tracking-[0.2em] text-slate-400">Plus</p>
+          <p class="mt-3 text-3xl font-semibold text-white">$599/mo</p>
+          <p class="mt-4 leading-7 text-slate-400">Up to 3 integrations, 2 months retention, 20 GB/day included</p>
+          <a href="#contact" class="mt-6 inline-flex w-full items-center justify-center rounded-2xl border border-white/10 bg-white/5 px-4 py-3 text-sm font-semibold text-white transition hover:bg-white/10">Choose Plus</a>
+        </div>
+        <div class="pricing-card rounded-[28px] border border-white/10 bg-white/[0.04] p-6 shadow-lg transition duration-300">
+          <p class="text-sm font-semibold uppercase tracking-[0.2em] text-slate-400">Unlimited</p>
+          <p class="mt-3 text-3xl font-semibold text-white">$1499/mo</p>
+          <p class="mt-4 leading-7 text-slate-400">Unlimited integrations, 6 months retention, fair-use volume</p>
+          <a href="#contact" class="mt-6 inline-flex w-full items-center justify-center rounded-2xl border border-white/10 bg-white/5 px-4 py-3 text-sm font-semibold text-white transition hover:bg-white/10">Choose Unlimited</a>
+        </div>
+      </div>
+
+      <div class="mt-8 rounded-[28px] border border-emerald-400/20 bg-emerald-400/10 p-6 text-sm leading-7 text-emerald-100">
+        Includes a required one-time onboarding setup, a 2-week pilot option, and optional add-ons for extra integrations, custom detection work, extended retention, and additional daily log volume.
+      </div>
+    </section>
+
+    <section class="mx-auto max-w-7xl px-6 pb-20 lg:px-10">
+      <div class="grid gap-10 lg:grid-cols-[1.2fr_0.8fr]">
+        <div class="rounded-[28px] border border-white/10 bg-gradient-to-br from-slate-900 to-slate-950 p-8 shadow-2xl">
+          <p class="text-sm font-semibold uppercase tracking-[0.25em] text-blue-300">Deployment and scope</p>
+          <h2 class="mt-3 text-3xl font-semibold tracking-tight text-white sm:text-4xl">Vendor-hosted deployment with practical onboarding and continuous improvement.</h2>
+          <p class="mt-5 max-w-3xl text-lg leading-8 text-slate-400">SentraCore includes onboarding, log source integration, dashboards, alerting, baseline detections, and HIPAA-focused PDF reporting.</p>
+          <p class="mt-4 max-w-3xl text-lg leading-8 text-slate-400">From there, the platform evolves through regular tuning, improved integration coverage, and better evidence tracking for compliance workflows.</p>
+        </div>
+
+        <div class="rounded-[28px] border border-white/10 bg-white/[0.04] p-8">
+          <p class="text-sm font-semibold uppercase tracking-[0.25em] text-emerald-300">Get started</p>
+          <h3 class="mt-3 text-2xl font-semibold text-white">Ready to launch a pilot.</h3>
+          <p class="mt-4 leading-7 text-slate-400">Start with your log volume, preferred plan, target environment, retention preference, and primary onboarding contact.</p>
+          <div class="mt-6 space-y-3 text-sm text-slate-300">
+            <div class="rounded-2xl border border-white/10 px-4 py-3">Share your rough daily log volume or number of systems.</div>
+            <div class="rounded-2xl border border-white/10 px-4 py-3">Choose Starter, Standard, Plus, or Unlimited.</div>
+            <div class="rounded-2xl border border-white/10 px-4 py-3">Prioritize AWS, GCP, Azure, endpoint, identity, email, or firewall sources.</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="mx-auto max-w-7xl px-6 pb-20 lg:px-10">
+      <div class="rounded-[32px] border border-white/10 bg-[linear-gradient(135deg,rgba(59,130,246,0.12),rgba(16,185,129,0.10))] p-8 shadow-2xl lg:p-10">
+        <div class="grid gap-8 lg:grid-cols-[1.1fr_0.9fr] lg:items-center">
+          <div>
+            <p class="text-sm font-semibold uppercase tracking-[0.25em] text-blue-300">Contact</p>
+            <h2 class="mt-3 text-3xl font-semibold tracking-tight text-white sm:text-4xl">Talk to SentraCore about your environment.</h2>
+            <p class="mt-4 max-w-2xl text-lg leading-8 text-slate-300">Planning a pilot, comparing plans, or deciding which log sources to connect first? Reach out and we can help scope the right setup for your team.</p>
+          </div>
+          <div class="rounded-[28px] border border-white/10 bg-slate-950/70 p-6">
+            <div class="mb-4 inline-flex items-center rounded-full border border-emerald-400/20 bg-emerald-400/10 px-3 py-1 text-xs font-medium text-emerald-300">Email us</div>
+            <p class="text-sm uppercase tracking-[0.2em] text-slate-500">Primary contact</p>
+            <a href="mailto:kushal.y.119@gmail.com" class="mt-3 block text-2xl font-semibold text-white transition hover:text-cyan-300">kushal.y.119@gmail.com</a>
+            <p class="mt-4 text-sm leading-7 text-slate-400">Share your daily log volume, target environment, retention preference, and preferred plan to get started faster.</p>
+            <a href="mailto:kushal.y.119@gmail.com?subject=SentraCore%20Inquiry" class="mt-6 inline-flex rounded-2xl bg-blue-500 px-5 py-3 text-sm font-semibold text-white shadow-xl transition hover:-translate-y-0.5">Contact SentraCore</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="border-t border-white/10 px-6 py-8 lg:px-10">
+      <div class="mx-auto flex max-w-7xl flex-col gap-3 text-sm text-slate-500 sm:flex-row sm:items-center sm:justify-between">
+        <p>© 2026 SentraCore. AI-powered security operations and compliance.</p>
+        <p>Contact: kushal.y.119@gmail.com</p>
+      </div>
+    </footer>
+  </body>
+</html>
